@@ -82,6 +82,7 @@ app.post("/login", (req, res, next) => {
         }
     })(req, res, next);
 });
+
 app.post('/verify', (req, res, next) => {
     const { token, id } = req.body
     console.log(id)

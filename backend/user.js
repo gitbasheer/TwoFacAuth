@@ -7,4 +7,4 @@ const user = new  mongoose.Schema({
     qr: String
 });
 
-module.exports = mongoose.model("user1", user);
+module.exports = mongoose.model("user", user);

@@ -26,6 +26,7 @@ module.exports = function (passport) {
     passport.serializeUser((user, cb) => { //stores a cookie in the browser
         cb(null, user.id);
     });
+    
     passport.deserializeUser((id, cb) => { // returns a user from the cookie
         User.findOne({ _id: id }, (err, user) => {
             const userInformation = {
