@@ -12,16 +12,6 @@ module.exports = function (passport) {
 
                 bcrypt.compare(password, user.password, (err, result) => {
                     if (err) throw err;
-
-                    /*
-                    const { base32: secret } = req.body.secret
-                    const verified = speakeasy.totp.verify({
-                        secret,
-                        encoding: 'base32',
-                        token
-                    })
-                    */
-
                     if (result === true) {
                         return done(null, user);
                     }
