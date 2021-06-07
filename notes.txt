@@ -1,0 +1,13 @@
+app.post('/verify', (req, res) => {
+    const user = req.user;
+    
+
+    if (verifyTOTP(req.body.code, user.mfaSecret)) {
+        user.mfaEnabled = true;
+        req.session.mfaVerified = true;
+        setUser(user);
+        res.json(true);
+    } else {
+        res.json(false);
+    }
+});
