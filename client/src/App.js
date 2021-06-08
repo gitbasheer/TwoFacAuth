@@ -73,7 +73,6 @@ function App() {
 
         if (res.data.success === true) {
           settempId(res.data.id)
-
         }
       });
   };

@@ -75,7 +75,6 @@ app.post("/login", (req, res, next) => {
     passport.authenticate("local", (err, user, info) => {
         if (err) throw err;
         if (!user) res.send("No User Exists");
-
         else {
             console.log(user)
             res.send({ success: true, verify: false, id: user._id })
