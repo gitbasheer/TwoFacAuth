@@ -13,7 +13,6 @@ const QRcode = require('qrcode');
 const { JsonDB } = require('node-json-db')
 const { Config } = require('node-json-db/dist/lib/JsonDBConfig');
 
-
 const db = new JsonDB(new Config('myDatabase', true, false, '/'))
 
 mongoose.connect(

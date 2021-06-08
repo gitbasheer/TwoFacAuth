@@ -6,7 +6,7 @@ module.exports = function (passport) {
 
     passport.use(
         new localStrategy((username, password, done) => {
-            
+
             User.findOne({ username: username }, (err, user) => {
                 if (err) throw err;
                 if (!user) return (null, false);
@@ -24,7 +24,7 @@ module.exports = function (passport) {
         })
     );
 
-    passport.serializeUser((user, cb) => { //stores a cookie in the browser
+    passport.serializeUser((user, cb) => { // stores a cookie in the browser
         cb(null, user.id);
     });
 

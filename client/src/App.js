@@ -53,8 +53,6 @@ function App() {
         console.log(res)
         if (res.data.success === true) {
           console.log("user is logged IN successfully ")
-
-
         }
       });
   }
